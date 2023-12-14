@@ -1,0 +1,38 @@
+% This file was created by matlab2tikz.
+%
+%The latest updates can be retrieved from
+%  http://www.mathworks.com/matlabcentral/fileexchange/22022-matlab2tikz-matlab2tikz
+%where you can also make suggestions and rate matlab2tikz.
+%
+\newenvironment{customlegend}[1][]{%
+	\begingroup
+	% inits/clears the lists (which might be populated from previous
+	% axes):
+	\csname pgfplots@init@cleared@structures\endcsname
+	\pgfplotsset{#1}%
+}{%
+% draws the legend:
+\csname pgfplots@createlegend\endcsname
+\endgroup
+}%
+
+% makes \addlegendimage available (typically only available within an
+% axis environment):
+\def\addlegendimage{\csname pgfplots@addlegendimage\endcsname}
+
+\begin{tikzpicture}
+
+\begin{customlegend}[legend columns=2,legend style={column sep=1ex},legend entries={\text{CR, $\alpha=0.01$}, \text{CR, $\alpha=0.1$}, \text{BF, $s=10^3, \epsilon=0.01$},\text{BF, $s=10^3, \epsilon=0.05$}, \text{BF, $s=10^3, \epsilon=0.1$}, \text{BF, $s=10^3, \epsilon=0.2$}, \text{BF, $s=10^4, \epsilon=0.01$},\text{BF, $s=10^4, \epsilon=0.05$}, \text{BF, $s=10^4, \epsilon=0.1$}, \text{BF, $s=10^4, \epsilon=0.2$}}]
+	\addlegendimage{color=red,mark=x, line legend}
+	\addlegendimage{color=blue, mark=x, line legend}
+	\addlegendimage{color=green,only marks,mark=o}
+	\addlegendimage{color=green,only marks,mark=asterisk}
+	\addlegendimage{color=green,only marks,mark=square}
+	\addlegendimage{color=green,only marks,mark=triangle}
+	\addlegendimage{color=black,only marks,mark=o}
+	\addlegendimage{color=black,only marks,mark=asterisk}
+	\addlegendimage{color=black,only marks,mark=square}
+	\addlegendimage{color=black,only marks,mark=triangle}
+\end{customlegend}
+
+\end{tikzpicture}%

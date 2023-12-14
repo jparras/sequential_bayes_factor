@@ -1,0 +1,127 @@
+% This file was created by matlab2tikz.
+%
+\begin{tikzpicture}
+
+\begin{axis}[%
+width=\figurewidth,
+height=\figureheight,
+at={(0\figurewidth,0\figureheight)},
+scale only axis,
+xmode=log,
+xmin=5,
+xmax=500,
+xminorticks=true,
+xmajorgrids,
+xminorgrids,
+ymode=log,
+ymin=0.01,
+ymax=1,
+yminorticks=true,
+ymajorgrids,
+yminorgrids,
+xlabel={$n$},
+ylabel={ATE},
+axis background/.style={fill=white},
+title style={font=\bfseries},
+legend style={legend cell align=left,align=left,draw=white!15!black}
+]
+\addplot [color=red,solid,mark=x,mark options={solid}]
+  table[row sep=crcr]{%
+5	0.533333333333334\\
+6	0.549047619047619\\
+8	0.543809523809524\\
+10	0.489047619047619\\
+13	0.462857142857143\\
+17	0.467142857142857\\
+21	0.443333333333334\\
+27	0.401428571428572\\
+35	0.337142857142857\\
+44	0.269047619047619\\
+56	0.265238095238095\\
+72	0.215714285714286\\
+92	0.188095238095238\\
+117	0.153809523809524\\
+149	0.145238095238095\\
+190	0.117142857142857\\
+242	0.090952380952381\\
+308	0.0814285714285715\\
+392	0.0714285714285715\\
+500	0.0614285714285715\\
+};
+%\addlegendentry{$\text{UMP, }\alpha\text{ = 0.01}$};
+
+\addplot [color=blue,solid,mark=x,mark options={solid}]
+  table[row sep=crcr]{%
+5	0.427619047619048\\
+6	0.343333333333334\\
+8	0.400952380952381\\
+10	0.395714285714286\\
+13	0.282857142857143\\
+17	0.331904761904762\\
+21	0.288571428571429\\
+27	0.214761904761905\\
+35	0.190952380952381\\
+44	0.156190476190476\\
+56	0.134285714285714\\
+72	0.123333333333333\\
+92	0.0942857142857143\\
+117	0.0904761904761905\\
+149	0.0757142857142857\\
+190	0.0595238095238095\\
+242	0.0457142857142857\\
+308	0.0404761904761905\\
+392	0.0419047619047619\\
+500	0.0361904761904762\\
+};
+%\addlegendentry{$\text{UMP, }\alpha\text{ = 0.1}$};
+
+\addplot [color=green,only marks,mark=o,mark options={solid}]
+  table[row sep=crcr]{%
+224.556666666667	0.0280952380952381\\
+};
+%\addlegendentry{BF, w = 1000,d = 0.01};
+
+\addplot [color=green,only marks,mark=asterisk,mark options={solid}]
+  table[row sep=crcr]{%
+42.4052380952381	0.0614285714285714\\
+};
+%\addlegendentry{BF, w = 1000,d = 0.05};
+
+\addplot [color=green,only marks,mark=square,mark options={solid}]
+  table[row sep=crcr]{%
+17.8857142857143	0.126190476190476\\
+};
+%addlegendentry{BF, w = 1000,d = 0.1};
+
+\addplot [color=green,only marks,mark=triangle,mark options={solid}]
+  table[row sep=crcr]{%
+6.91	0.237619047619048\\
+};
+%\addlegendentry{BF, w = 1000,d = 0.2};
+
+\addplot [color=black,only marks,mark=o,mark options={solid}]
+  table[row sep=crcr]{%
+198.370476190476	0.03\\
+};
+%\addlegendentry{BF, w = 10000,d = 0.01};
+
+\addplot [color=black,only marks,mark=asterisk,mark options={solid}]
+  table[row sep=crcr]{%
+42.2314285714286	0.0642857142857143\\
+};
+%\addlegendentry{BF, w = 10000,d = 0.05};
+
+\addplot [color=black,only marks,mark=square,mark options={solid}]
+  table[row sep=crcr]{%
+17.1061904761905	0.116666666666667\\
+};
+%\addlegendentry{BF, w = 10000,d = 0.1};
+
+\addplot [color=black,only marks,mark=triangle,mark options={solid}]
+  table[row sep=crcr]{%
+6.74428571428571	0.230476190476191\\
+};
+%\addlegendentry{BF, w = 10000,d = 0.2};
+
+\end{axis}
+\end{tikzpicture}%
